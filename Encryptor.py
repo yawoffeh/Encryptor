@@ -1,15 +1,15 @@
 import pyAesCrypt 
 import os
 
-files = os.listdir()
+files = os.listdir() #get files in directory
 
 def main():
-	passw = "solstice"
-	bufferSize = 64 * 1024
+	passw = "solstice" #password
+	bufferSize = 64 * 1024 
 	for file in files:
 		try:
 			pyAesCrypt.encryptFile(file, file + ".out", passw, bufferSize)
-			print("Enccrypted")
+			print("Encrypted")
 		except:
 			print("unsucessful")
 
